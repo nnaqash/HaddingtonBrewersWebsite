@@ -21,7 +21,7 @@ const Navbar = () => {
         
         {/* Logo Section: Always visible, aligned to the start */}
         <div className="flex items-center flex-shrink-0">
-          <img src="./images/logo.png" alt="Club logo" className="w-24 h-auto" />
+          <img src="./images/logo.png" alt="Club logo" className="w-32 rounded-full" />
         </div>
 
         {/* Hamburger Menu: Visible only on small screens */}
