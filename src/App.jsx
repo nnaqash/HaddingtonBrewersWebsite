@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import ImageSlider from './components/ImageSlider'
+import AboutUs from './components/AboutUs'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <>
     <Navbar/>
     <ImageSlider images={images} />
+    <AboutUs/>
     
 
       
