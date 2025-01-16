@@ -3,6 +3,8 @@ import './App.css'
 import Navbar from './components/Navbar'
 import ImageSlider from './components/ImageSlider'
 import AboutUs from './components/AboutUs'
+import Update from './components/Update'
+import Footer from './components/footer'
 
 
 function App() {
@@ -15,9 +17,14 @@ function App() {
 
   return (
     <>
-    <Navbar/>
-    <ImageSlider images={images} />
+    <div className='bg-blue-200'>
+    <Navbar/>    
     <AboutUs/>
+    <ImageSlider images={images} />
+    <Update/>
+    <Footer/>
+    </div>
+    
     
 
       

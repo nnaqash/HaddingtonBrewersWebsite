@@ -21,6 +21,9 @@ export default {
         },
       },
     },
+    fontFamily: {
+      sans: ['"Carter One"', 'cursive'], // Adds Carter One font
+    },
   },
   plugins: [],
 }

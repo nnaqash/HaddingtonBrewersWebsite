@@ -51,7 +51,7 @@ const ImageSlider = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full max-w-[1200px] mx-auto overflow-hidden hidden md:block mt-10">
+    <div className="relative w-2/3 mx-auto  overflow-hidden hidden md:block mt-10">
       {/* Previous Button: Moves to the previous image in the slider */}
       <button
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full z-10 hover:bg-gray-700 text-3xl"
@@ -68,7 +68,7 @@ const ImageSlider = ({ images }) => {
             className="w-full flex-shrink-0"
           >
             {/* Image: Each image fills the full width of the container */}
-            <img src={image} alt={`Slide ${index}`} className="w-full h-auto object-cover" />
+            <img src={image} alt={`Slide ${index}`} className="w-full h-auto  max-h-[1000px] object-cover" />
           </div>
         ))}
       </div>
