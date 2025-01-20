@@ -84,7 +84,7 @@ const Team = () => {
       image: "./images/players/zack.jpg",
     },
     {
-      id: 9,
+      id: 10,
       name: "Alfie",
       number: 12,
       position: "guard",

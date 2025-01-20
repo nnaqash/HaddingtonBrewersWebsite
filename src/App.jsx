@@ -23,7 +23,7 @@ function App() {
         <Navbar />
 
         {/* Dynamic Content */}
-        <main className="relative top-44">
+        <main className="relative top-24">
           <Outlet /> {/* Renders child route components */}
         </main>
 

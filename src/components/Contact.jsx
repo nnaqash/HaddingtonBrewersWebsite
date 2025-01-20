@@ -114,7 +114,7 @@ const Contact = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="h-12 md:h-14 bg-customRed text-customWhite rounded-md cursor-pointer text-sm md:text-lg font-medium mt-6 w-full hover:bg-customGray"
+            className="h-12 md:h-14 bg-customRed text-customWhite rounded-md cursor-pointer text-sm md:text-lg font-medium mt-6 w-full hover:bg-customWhite hover:text-customRed"
           >
             Send Message
           </button>
