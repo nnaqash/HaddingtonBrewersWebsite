@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   // State to manage the visibility of the mobile menu
@@ -15,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-customBlue text-customWhite p-4">
+    <nav className="bg-customBlue text-customWhite p-4 fixed top-0 w-full z-50">
       {/* Navbar container: centers the content and uses flexbox for layout */}
       <div className="container mx-auto flex items-center justify-between relative">
         
@@ -56,44 +57,64 @@ const Navbar = () => {
           }`}
         >
           {/* Menu Item: Home */}
-          <li
-            className="bg-customRed py-3 px-8 rounded text-white font-bold hover:bg-[#800000] cursor-pointer text-4xl"
-            onClick={handleClose} // Close menu after clicking
-          >
-            Home
-          </li>
+          <Link to="/">
+            <li
+              className="bg-customRed py-3 px-5  rounded text-white font-bold hover:bg-[#800000] cursor-pointer text-4xl"
+              onClick={handleClose} // Close menu after clicking
+            >
+              Home
+            </li>
+          </Link>          
 
           {/* Menu Item: Contact Us */}
+          <Link to="/Contact">
           <li
-            className="bg-customRed py-3 px-8 rounded text-white font-bold hover:bg-customWhite hover:text-customBlue cursor-pointer text-4xl"
+            className="bg-customRed py-3 px-5  rounded text-white font-bold hover:bg-customWhite hover:text-customBlue cursor-pointer text-4xl"
             onClick={handleClose} // Close menu after clicking
           >
             Contact Us
-          </li>
+          </li></Link>
+          
 
           {/* Menu Item: Committee */}
+          <Link to="/Team">
           <li
-            className="bg-customRed py-3 px-8 rounded text-white font-bold hover:bg-customWhite hover:text-customRed cursor-pointer text-4xl"
+            className="bg-customRed py-3 px-5  rounded text-white font-bold hover:bg-customWhite hover:text-customRed cursor-pointer text-4xl"
             onClick={handleClose} // Close menu after clicking
           >
-            Committee
+            Team
           </li>
+          </Link>
 
           {/* Menu Item: Fixtures */}
+          <Link to="/Fixtures">
           <li
-            className="bg-customRed py-3 px-8 rounded text-white font-bold hover:bg-[#FFC0CB] hover:text-customBlue cursor-pointer text-4xl"
+            className="bg-customRed py-3 px-5  rounded text-white font-bold hover:bg-[#FFC0CB] hover:text-customBlue cursor-pointer text-4xl"
             onClick={handleClose} // Close menu after clicking
           >
             Fixtures
           </li>
+          </Link>
+
+          {/* Menu Item: highlights */}
+          <Link to="/Highlights">
+          <li
+            className="bg-customRed py-3 px-5  rounded text-white font-bold hover:bg-[#FFC0CB] hover:text-customBlue cursor-pointer text-4xl"
+            onClick={handleClose} // Close menu after clicking
+          >
+            Highlights
+          </li>
+          </Link>
 
           {/* Menu Item: Merch */}
+          <Link to="/Merch">
           <li
-            className="bg-customRed py-3 px-8 rounded text-white font-bold hover:bg-customGray hover:text-customBlue cursor-pointer text-4xl"
+            className="bg-customRed py-3 px-5  rounded text-white font-bold hover:bg-customGray hover:text-customBlue cursor-pointer text-4xl"
             onClick={handleClose} // Close menu after clicking
           >
             Merch
           </li>
+          </Link>
         </ul>
       </div>
     </nav>

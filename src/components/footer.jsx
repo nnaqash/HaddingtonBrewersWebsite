@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="bg-customBlue py-10">
+    <div className="bg-customBlue py-10 relative top-52">
       {/* Footer Content */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-10 px-8">
         {/* Social Media Section */}

@@ -8,13 +8,13 @@ const AboutUs = () => {
         <img
           src="./images/cover.jpg"
           alt="Basketball Team"
-          className="w-full h-auto max-h-[1100px]  object-cover p-7"
+          className="w-full h-auto max-h-[2000px]  object-cover p-7"
         />
       </div>
 
       {/* Text Section */}
       <div className="md:w-1/2 px-5 py-5 flex ">
-        <p className="text-4xl leading-loose font-semibold py-10 ">
+        <p className="text-4xl leading-loose py-10 ">
           <strong>Who are we?</strong><br /> We are a community ran senior mens
           basketball club based in Haddington and competing in the Lothian
           Basketball Associations Lothian League (Senior Mens Div 4).  We

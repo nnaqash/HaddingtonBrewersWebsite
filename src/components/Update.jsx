@@ -2,7 +2,7 @@ import React from 'react';
 
 const Update = () => {
   return (
-    <div className="bg-customRed m-5 text-center text-customWhite">
+    <div className="bg-customRed m-5 text-center text-customWhite relative top-52 ">
       <h1 className="text-7xl mb-6 font-bold">Latest Updates</h1>
       {/* Cards container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-6 pb-8">

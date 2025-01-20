@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import { Outlet } from 'react-router-dom'; // Import Outlet for nested routes
 import './App.css'
 import Navbar from './components/Navbar'
-import ImageSlider from './components/ImageSlider'
+
 import AboutUs from './components/AboutUs'
 import Update from './components/Update'
 import Footer from './components/footer'
@@ -17,16 +18,18 @@ function App() {
 
   return (
     <>
-    <div className='bg-blue-200'>
-    <Navbar/>    
-    <AboutUs/>
-    <ImageSlider images={images} />
-    <Update/>
-    <Footer/>
-    </div>
-    
-    
+    <div className="bg-blue-200">
+        {/* Navbar */}
+        <Navbar />
 
+        {/* Dynamic Content */}
+        <main className="relative top-44">
+          <Outlet /> {/* Renders child route components */}
+        </main>
+
+        {/* Footer */}
+        <Footer />
+      </div>
       
     </>
   )
