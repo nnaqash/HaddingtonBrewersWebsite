@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import { Outlet } from 'react-router-dom'; // Import Outlet for nested routes
-import './App.css'
-import Navbar from './components/Navbar'
-
-import AboutUs from './components/AboutUs'
-import Update from './components/Update'
-import Footer from './components/footer'
-
+import { useState } from "react";
+import { Outlet } from "react-router-dom"; // Import Outlet for nested routes
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/footer";
+import ScrollToTop from "./components/scrollToTop"; // Import ScrollToTop component
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   const images = [
     "./images/slider.png",
     "./images/slider2.png",
@@ -18,7 +15,8 @@ function App() {
 
   return (
     <>
-    <div className="bg-blue-200">
+      <ScrollToTop /> {/* Add ScrollToTop here */}
+      <div className="bg-blue-200">
         {/* Navbar */}
         <Navbar />
 
@@ -30,9 +28,8 @@ function App() {
         {/* Footer */}
         <Footer />
       </div>
-      
     </>
-  )
+  );
 }
 
-export default App
+export default App;
