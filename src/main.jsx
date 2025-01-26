@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import ScrollToTop from "./components/scrollToTop.jsx";
 import "./index.css";
 import App from "./App.jsx"; // Import App from the src root
 import Home from "./components/Home.jsx";
@@ -30,8 +29,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    {/* Add ScrollToTop here */}    
+  <StrictMode>       
     <RouterProvider router={router} />
   </StrictMode>
 );

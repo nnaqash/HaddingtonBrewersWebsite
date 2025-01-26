@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom"; // Import Outlet for nested routes
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
-import ScrollToTop from "./components/scrollToTop"; // Import ScrollToTop component
+import ScrollTop from "./components/scrollTop";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <ScrollToTop /> {/* Add ScrollToTop here */}
+      <ScrollTop /> {/* Add ScrollToTop here */}
       <div className="bg-blue-200">
         {/* Navbar */}
         <Navbar />
