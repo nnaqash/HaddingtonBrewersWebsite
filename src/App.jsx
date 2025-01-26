@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom"; // Import Outlet for nested routes
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
+import TopScroll from "./components/TopScroll";
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <>
-      
+      <TopScroll /> {/* This ensures scrolling happens on route changes */}
       <div className="bg-blue-200">
         {/* Navbar */}
         <Navbar />
