@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { HelmetProvider } from "react-helmet-async"; // Import HelmetProvider
 const Highlights = () => {
   const [searchTerm, setSearchTerm] = useState(""); // Track search input
 

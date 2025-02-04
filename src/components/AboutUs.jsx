@@ -1,5 +1,6 @@
 import React from "react";
 import ImageSlider from "./ImageSlider";
+import { HelmetProvider } from "react-helmet-async"; // Import HelmetProvider
 
 const AboutUs = () => {
   const images = [

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { HelmetProvider } from "react-helmet-async"; // Import HelmetProvider
 const Fixtures = () => {
   const fixtures = [
     {
