@@ -105,6 +105,12 @@ const Team = () => {
 
   ];
   return (
+    <>
+    <Helmet>
+        <title>Meet the Team | Haddington Brewers Basketball Club</title>
+        <meta name="description" content="Meet the Haddington Brewers Basketball Club team. Get to know our players, coaches, and staff." />
+        <meta name="keywords" content="Haddington Basketball Team, Basketball Players, Team Roster, Coaches, Player Profiles, Meet the Team" />
+    </Helmet>
     <div className="container mx-auto text-customWhite">
       {/* Header Section */}
       <section>
@@ -137,6 +143,7 @@ const Team = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -40,6 +40,12 @@ const Highlights = () => {
   );
 
   return (
+    <>
+    <Helmet>
+        <title>Match Highlights | Haddington Brewers Basketball Club</title>
+        <meta name="description" content="Watch the best match highlights, top plays, and exciting moments from Haddington Brewers Basketball Club." />
+        <meta name="keywords" content="Basketball Highlights, Haddington Basketball, Match Highlights, Best Plays, Top Moments, Game Recap" />
+      </Helmet>
     <div className="container mx-auto bg-customBlue text-customWhite py-12 relative top-10">
       {/* Header */}
       <section className="mb-8">
@@ -111,6 +117,8 @@ const Highlights = () => {
         </div>
       </section>
     </div>
+    </>
+    
   );
 };
 

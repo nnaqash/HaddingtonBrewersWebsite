@@ -35,6 +35,12 @@ const Merch = () => {
   ];
 
   return (
+    <>
+    <Helmet>
+        <title>Shop Merch | Haddington Brewers Basketball Club</title>
+        <meta name="description" content="Get official Haddington Brewers Basketball Club merchandise. Shop for jerseys, t-shirts, hats, and more." />
+        <meta name="keywords" content="Basketball Merch, Haddington Basketball Merchandise, Buy Team Gear, Jerseys, Sports Apparel, Club Shop" />
+    </Helmet>
     <div className="container mx-auto bg-customBlue text-customWhite py-12 relative top-10">
       {/* Header */}
       <section className="mb-8">
@@ -94,6 +100,8 @@ const Merch = () => {
         </div>
       </section>
     </div>
+    </>
+    
   );
 };
 

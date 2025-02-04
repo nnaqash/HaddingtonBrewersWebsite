@@ -78,6 +78,12 @@ const Fixtures = () => {
   ];
 
   return (
+    <>
+    <Helmet>
+        <title>Match Fixtures | Haddington Brewers Basketball Club</title>
+        <meta name="description" content="Check out the latest match fixtures and game schedule for Haddington Brewers Basketball Club. Don't miss a game!" />
+        <meta name="keywords" content="Haddington Basketball Fixtures, Match Schedule, Upcoming Games, Basketball Matches, Team Fixtures" />
+      </Helmet>
     <div className="container mx-auto text-customWhite py-12">
       {/* Header */}
       <section className="mb-8">
@@ -129,6 +135,8 @@ const Fixtures = () => {
         </div>
       </section>
     </div>
+    </>
+    
   );
 };
 
