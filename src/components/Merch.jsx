@@ -1,5 +1,5 @@
 import React from "react";
-import { HelmetProvider } from "react-helmet-async"; // Import HelmetProvider
+import { Helmet } from "react-helmet-async"; // Import Helmet for SEO
 
 const Merch = () => {
   const merchItems = [

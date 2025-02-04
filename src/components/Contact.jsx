@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet-async"; // ✅ Import Helmet for SEO
+import { Helmet } from "react-helmet-async"; // Import Helmet for SEO
 import Swal from "sweetalert2";
 
 const Contact = () => {
