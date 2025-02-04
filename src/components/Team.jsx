@@ -9,6 +9,7 @@ const Team = () => {
       position: "Forward",
       height: "6'7\"",
       favoritePlayer: "Michael Jordan",
+      Bio:"I love playing basketball or started playing beacause, whatever is your story",
       image: "./images/players/chris.jpg",
     },
     {
