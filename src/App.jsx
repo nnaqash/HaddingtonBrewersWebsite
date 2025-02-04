@@ -8,11 +8,7 @@ import TopScroll from "./components/TopScroll";
 
 function App() {
   const [count, setCount] = useState(0);
-  const images = [
-    "./images/slider.png",
-    "./images/slider2.png",
-    "./images/slider3.png",
-  ];
+
 
   return (
     <>

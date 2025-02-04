@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-customBlue text-customWhite py-2 fixed top-0 w-full z-50">
+    <nav className="bg-customBlue text-customWhite py-2 fixed top-0 w-full z-50 shadow-lg">
       <div className="container mx-auto flex items-center justify-between px-6">
         {/* Logo */}
         <div className="flex items-center">
@@ -26,13 +26,30 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        {/* Hamburger Button */}
-        <div className="md:hidden">
-          <button
-            onClick={handleToggle}
-            className="text-white focus:outline-none"
-          >
-            {/* SVG Icon changes dynamically */}
+        {/* Desktop Navigation (Large & XL Screens) */}
+        <ul className="hidden lg:flex space-x-6">
+          {["Home", "Contact", "Team", "Fixtures", "Highlights", "Merch"].map(
+            (item) => (
+              <li key={item}>
+                <NavLink
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-customWhite text-customRed font-bold py-2 px-4 rounded text-lg"
+                      : "bg-customRed text-customWhite font-medium py-2 px-4 rounded text-lg hover:bg-customWhite hover:text-customRed transition-all"
+                  }
+                >
+                  {item}
+                </NavLink>
+              </li>
+            )
+          )}
+        </ul>
+
+        {/* Hamburger Button (Medium & Small Screens) */}
+        <div className="lg:hidden">
+          <button onClick={handleToggle} className="text-white focus:outline-none">
+            {/* SVG Icon toggles dynamically */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-8 w-8"
@@ -53,92 +70,32 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
+      </div>
 
-        {/* Navigation Links */}
-        <ul
-          className={`md:flex md:space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-customBlue md:bg-transparent flex flex-col md:flex-row items-center transition-all duration-300 ${
-            isOpen ? "block" : "hidden"
-          }`}
-        >
-          {/* Menu Links */}
-          <li className="w-full md:w-auto">
-            <NavLink
-              to="/"
-              onClick={handleClose}
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-customWhite text-customRed font-bold py-2 px-4 block rounded text-lg"
-                  : "bg-customRed text-customWhite font-medium py-2 px-4 block hover:bg-customWhite hover:text-customRed rounded text-lg"
-              }
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="w-full md:w-auto">
-            <NavLink
-              to="/Contact"
-              onClick={handleClose}
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-customWhite text-customRed font-bold py-2 px-4 block rounded text-lg"
-                  : "bg-customRed text-customWhite font-medium py-2 px-4 block hover:bg-customWhite hover:text-customRed rounded text-lg"
-              }
-            >
-              Contact
-            </NavLink>
-          </li>
-          <li className="w-full md:w-auto">
-            <NavLink
-              to="/Team"
-              onClick={handleClose}
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-customWhite text-customRed font-bold py-2 px-4 block rounded text-lg"
-                  : "bg-customRed text-customWhite font-medium py-2 px-4 block hover:bg-customWhite hover:text-customRed rounded text-lg"
-              }
-            >
-              Team
-            </NavLink>
-          </li>
-          <li className="w-full md:w-auto">
-            <NavLink
-              to="/Fixtures"
-              onClick={handleClose}
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-customWhite text-customRed font-bold py-2 px-4 block rounded text-lg"
-                  : "bg-customRed text-customWhite font-medium py-2 px-4 block hover:bg-customWhite hover:text-customRed rounded text-lg"
-              }
-            >
-              Fixtures
-            </NavLink>
-          </li>
-          <li className="w-full md:w-auto">
-            <NavLink
-              to="/Highlights"
-              onClick={handleClose}
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-customWhite text-customRed font-bold py-2 px-4 block rounded text-lg"
-                  : "bg-customRed text-customWhite font-medium py-2 px-4 block hover:bg-customWhite hover:text-customRed rounded text-lg"
-              }
-            >
-              Highlights
-            </NavLink>
-          </li>
-          <li className="w-full md:w-auto">
-            <NavLink
-              to="/Merch"
-              onClick={handleClose}
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-customWhite text-customRed font-bold py-2 px-4 block rounded text-lg"
-                  : "bg-customRed text-customWhite font-medium py-2 px-4 block hover:bg-customWhite hover:text-customRed rounded text-lg"
-              }
-            >
-              Merch
-            </NavLink>
-          </li>
+      {/* Mobile Navigation Menu (Shows when isOpen is true) */}
+      <div
+        className={`lg:hidden bg-customBlue transition-all duration-300 overflow-hidden ${
+          isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col items-center space-y-4 py-4">
+          {["Home", "Contact", "Team", "Fixtures", "Highlights", "Merch"].map(
+            (item) => (
+              <li key={item} className="w-full text-center">
+                <NavLink
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`} // ✅ Fixed Home Route
+                  onClick={handleClose}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-customWhite text-customRed font-bold py-2 px-6 block rounded text-lg"
+                      : "bg-customRed text-customWhite font-medium py-2 px-6 block rounded text-lg hover:bg-customWhite hover:text-customRed transition-all"
+                  }
+                >
+                  {item}
+                </NavLink>
+              </li>
+            )
+          )}
         </ul>
       </div>
     </nav>

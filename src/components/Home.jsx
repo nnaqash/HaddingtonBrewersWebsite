@@ -12,8 +12,7 @@ const Home = () => {
 
   return (
     <>
-      <AboutUs />
-      <ImageSlider images={images} />
+      <AboutUs />      
       <Update />
     </>
   );

@@ -27,7 +27,7 @@ const Team = () => {
       position: "Center",
       height: "6'3\"",
       favoritePlayer: "Kobe Bryant",
-      image: "./images/players/alex.jpg",
+      image: "./images/players/alex.png",
     },
     {
       id: 4,
@@ -54,7 +54,7 @@ const Team = () => {
       position: "guard",
       height: "6'3\"",
       favoritePlayer: "Kobe Bryant",
-      image: "./images/players/josh.jpg",
+      image: "./images/players/josh.png",
     },
     {
       id: 7,
@@ -81,7 +81,7 @@ const Team = () => {
       position: "guard",
       height: "6'3\"",
       favoritePlayer: "Kobe Bryant",
-      image: "./images/players/zack.jpg",
+      image: "./images/players/zack.png",
     },
     {
       id: 10,
@@ -91,6 +91,15 @@ const Team = () => {
       height: "6'3\"",
       favoritePlayer: "Kobe Bryant",
       image: "./images/players/alfie.jpg",
+    },
+    {
+      id: 11,
+      name: "Kos",
+      number: 12,
+      position: "center",
+      height: "6'6\"",
+      favoritePlayer: "Kobe Bryant",
+      image: "./images/players/kos.png",
     },
 
   ];
@@ -114,7 +123,7 @@ const Team = () => {
               <img
                 src={player.image}
                 alt={player.name}
-                className="w-full h-72 object-cover rounded-t-lg"
+                className="w-full h-80 object-cover rounded-t-lg"
               />
               <div className="p-4">
                 <h3 className="text-xl font-medium">{player.name}</h3>
