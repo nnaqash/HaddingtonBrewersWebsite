@@ -35,7 +35,7 @@ Welcome to the official repository for the **Haddington Brewers Basketball Club*
 
 ## Visit the Live Site
 
-Check out the live site here: [**Haddington Brewers Basketball Club**](https://musical-quokka-6e81f1.netlify.app/).
+Check out the live site here: [**Haddington Brewers Basketball Club**](https://haddingtonbrewersbasketballclub.com/).
 
 Use the navbar to explore different sections like **Team**, **Fixtures**, **Highlights**, and **Merch**.
 
